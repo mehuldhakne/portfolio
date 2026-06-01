@@ -1,0 +1,153 @@
+/* ── ABOUT PAGE ── */
+
+.page-hero {
+  padding: 4rem 0 3.5rem;
+  background: var(--bg-card);
+  border-bottom: 1px solid var(--border);
+}
+.page-hero-inner { max-width: 580px; }
+
+.about-section { padding: 5rem 0; }
+
+/* Two-col layout */
+.about-grid {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+/* ── Profile sidebar ── */
+.profile-sidebar {
+  position: sticky;
+  top: calc(var(--nav-h) + 1.5rem);
+}
+.profile-avatar {
+  width: 96px; height: 96px;
+  border-radius: 50%;
+  background: var(--blue-muted);
+  border: 2px solid var(--blue-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--blue);
+  margin-bottom: 1.25rem;
+  overflow: hidden;
+}
+.profile-name {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.25rem;
+  letter-spacing: -0.01em;
+}
+.profile-role {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  font-weight: 600;
+  margin-bottom: 1.25rem;
+  letter-spacing: 0.02em;
+}
+.profile-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border);
+}
+.profile-detail {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+.profile-detail-icon { color: var(--blue); font-size: 0.9rem; flex-shrink: 0; margin-top: 1px; }
+.profile-detail a { color: var(--text-secondary); text-decoration: none; }
+.profile-detail a:hover { color: var(--blue); }
+
+.strength-list { display: flex; flex-direction: column; gap: 0.45rem; }
+.strength-item {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+.strength-item::before {
+  content: '';
+  width: 5px; height: 5px;
+  border-radius: 50%;
+  background: var(--blue);
+  flex-shrink: 0;
+}
+
+/* ── Education ── */
+.edu-block { margin-bottom: 2.5rem; }
+.edu-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  transition: border-color var(--speed) var(--ease);
+}
+.edu-card:hover { border-color: var(--blue); }
+.edu-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+.edu-institution {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+}
+.edu-period {
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  white-space: nowrap;
+  background: var(--bg-subtle);
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+}
+.edu-degree { font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 0.35rem; }
+.edu-score {
+  display: inline-block;
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--blue);
+  background: var(--blue-muted);
+  padding: 0.18rem 0.6rem;
+  border-radius: 3px;
+}
+
+/* ── Objective ── */
+.objective-block {
+  background: var(--blue-muted);
+  border-left: 3px solid var(--blue);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  padding: 1.5rem;
+  margin-bottom: 2.5rem;
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.75;
+}
+
+/* Mobile */
+@media (max-width: 900px) {
+  .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+  .profile-sidebar { position: static; }
+}
